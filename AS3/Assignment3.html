@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+uniform mat4 uModelMatrix;
+
+void
+main()
+{
+    gl_Position = uModelMatrix * vPosition;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+uniform vec4 Mcolor;
+
+
+void
+main()
+{
+    gl_FragColor = Mcolor;
+}
+</script>
+
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+<script type="text/javascript" src="../Common/MV.js"></script>
+<script type="text/javascript" src="Assignment3.js"></script>
+</head>
+
+<body style="background-color:rgb(134, 167, 209);">
+	Firuza Rahimova<br>
+	
+	Student ID: 20050141056 <br>
+
+    <!--I used div to center the whole canvas-->
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <canvas id="gl-canvas" width="512" height="512" style="display: block; margin: auto;">
+            Oops ... your browser doesn't support the HTML5 canvas element
+        </canvas>
+    </div>
+
+    <div class="transformations" style="position: fixed; right: 0; top: 0; width: 350px; height: 100vh; background-color: rgb(135, 83, 204); padding: 30px; box-sizing: border-box;">
+        <h2>---Transformations---</h2>
+        <br>
+
+    
+
+        <div class="positions">
+            <h3>Position</h3>
+            X: -1<input type="range" step="0.01" id = "posX" min="-1" max="1" value="0">1
+            <br>
+            Y: -1<input type="range" step="0.01" id = "posY" min="-1" max="1" value="0">1
+        </div>
+
+        <div class="scale">
+            <h3>Scale</h3>
+            X: 0<input type="range" step="0.01" id = "scX" min="0" max="2" value="1">2
+            <br>
+            Y: 0<input type="range" step="0.01" id = "scY" min="0" max="2" value="1">2
+        </div>
+
+        <div class="rotation">
+            <h3>Rotation</h3>
+            -180<input type="range" id = "rot" min="-180" max="180" value="0">180
+            
+        </div>
+        
+        
+
+        <h2>---Colors---</h2>
+        <br>
+
+        <div class="color">
+            
+            R: 0<input type="range" step="0.01" id = "cR" min="0" max="1" value="0.6">1
+            <br>
+            G: 0<input type="range" step="0.01" id = "cG" min="0" max="1" value="0">1
+            <br>
+            B: 0<input type="range" step="0.01" id = "cB" min="0" max="1" value="1">1
+        </div>
+
+
+    </div>
+
+</body>
+</html>
