@@ -1,1 +1,3 @@
 # 2Dtransformations
+
+<h4> <i>"2Dtransformations"</i> contains a simple yet powerful demonstration of interactive 2D transformations using WebGL and JavaScript. It showcases how to manipulate vertices to perform translation, scaling, and rotation on geometric shapes, specifically the initials "F" and "R". The project is structured around a main HTML document that sets up the WebGL context and shaders, and includes JavaScript files for handling the transformation logic and utility functions. Users can interact with the shapes in real-time through a set of UI controls, making it an excellent educational tool for understanding the principles of 2D graphics programming.</h4>
